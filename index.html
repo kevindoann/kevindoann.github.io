@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kevin Doan</title>
+		<link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon" /> 
+		<link rel="stylesheet" href="scripts/styles.css">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type='text/javascript' src="scripts/three.min.js"></script>
+		<script type='text/javascript' src="scripts/OrbitControls.js"></script>
+		<script type='text/javascript' src="scripts/tween.js"></script>
+
+		<script type="text/javascript" src="scripts/main.js"></script>
+
+	</head>
+<body>
+	<div id="intro"></div>
+
+	<div id="index">
+		<div id="holder">
+			
+			<div id="links-holder">
+				<!--<div class="links" onclick="initContent('php/home')">Kevin Doan</div>-->
+				<div class="links" onclick="resizeRenderer(false)">Kevin Doan</div>
+
+<!-- 					<div class="container">
+						<div class="header">Projects</div>
+							
+							<div class="content" onclick="initContent('php/bottles')"><em>Hydration</em></div>
+							<div class="content" onclick="initContent('php/videos')"><em>Videos</em></div>
+							<div class="content" onclick="initContent('php/ghost')"><em>Ghost</em></div>
+							<div class="content" onclick="initContent('php/cgem')"><em>CGEM</em></div>
+					</div> -->
+					
+				<div class="links" onclick="initContent('php/about')">About</div>
+				<div id="sidelink">Email:<br><a href="mailto:k@tig.ht">k@tig.ht</a></div>
+			</div>
+
+		</div>
+	</div>
+	
+	<div id="content-holder"></div>
+
+
+		<script>
+			$(".header").click(function () {
+					$header = $(this);
+				    //getting the next element
+				    $content = $(this).nextAll();
+				    //checking if its already visible
+				    $content.slideToggle(500, function () {
+			        //execute this after slideToggle is done
+			        //change text of header based on visibility of content div
+			        $header.text(function () {
+			        });
+			    });
+			});
+		</script>
+	</body>
+</html>
+
